@@ -88,7 +88,7 @@ const FilterModal = ({  closeModal }: FilterModalProp) => {
           onChange={handleOrganizationOnchange}
           menuPosition="fixed"
           styles={{
-            control: (base, state) => ({
+            control: (base) => ({
               ...base,
               backgroundColor: "",
               borderColor: "#D1D5DB", // lighter on focus
@@ -188,7 +188,7 @@ const FilterModal = ({  closeModal }: FilterModalProp) => {
                 color: "#ffffff",
               },
             }),
-            placeholder: (base, state) => ({
+            placeholder: (base) => ({
               ...base,
               color: "#545F7D",
               fontSize: "12px",
@@ -271,7 +271,7 @@ const FilterModal = ({  closeModal }: FilterModalProp) => {
           onChange={handleStatusOnchange}
           menuPosition="fixed"
           styles={{
-            control: (base, state) => ({
+            control: (base) => ({
               ...base,
               backgroundColor: "",
               borderColor: "#D1D5DB", // lighter on focus
@@ -371,7 +371,7 @@ const FilterModal = ({  closeModal }: FilterModalProp) => {
                 color: "#ffffff",
               },
             }),
-            placeholder: (base, state) => ({
+            placeholder: (base) => ({
               ...base,
               color: "#545F7D",
               fontSize: "12px",
