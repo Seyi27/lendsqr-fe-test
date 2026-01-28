@@ -1,0 +1,85 @@
+/* ******************************** */
+
+/* Normal Input Field */
+.normal_input_box {
+  width: 100%;
+  margin-top: 20px;
+
+  .normal_textinput {
+    height: 45px;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid #545f7d26;
+    padding-left: 10px;
+    outline: none;
+    transition:
+      border-color 0.3s,
+      border-width 0.3s;
+    box-sizing: border-box;
+    font-family: Avenir Next;
+
+    &::placeholder {
+      font-size: 12px;
+      font-weight: 400;
+      color: #545f7d;
+    }
+  }
+}
+
+/* ******************************** */
+
+/* For Password Input Field */
+.password_input_box {
+  width: 100%;
+  margin-top: 20px;
+
+  .password_textinput_container {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid #545f7d26;
+    padding: 0 10px;
+    outline: none;
+    transition:
+      border-color 0.3s,
+      border-width 0.3s;
+    box-sizing: border-box;
+
+    input {
+      flex: 1;
+      font-size: 15px;
+      border-width: 0px;
+      border: none;
+      outline: none;
+      font-family: Avenir Next;
+
+      &::placeholder {
+        font-size: 12px;
+        font-weight: 400;
+        color: #545f7d;
+      }
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 400;
+      color: #39cdcc;
+      cursor: pointer;
+    }
+  }
+}
+/******************************/
+
+/* Error message */
+.error_message {
+  font-size: 10px;
+  color: red;
+}
+
+.error_textInput {
+  border-color: red !important;
+}

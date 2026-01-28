@@ -1,0 +1,33 @@
+.login_form_container {
+  width: 550px;
+
+  h1 {
+    margin: 0;
+    color: #213f7d;
+  }
+
+  p {
+    margin: 0;
+    color: #545f7d;
+    // font-family: "Avenir Next";
+  }
+
+  form {
+    padding-top: 20px;
+
+    .forgot_password_text {
+      margin: 20px 0;
+      font-size: 12px;
+      color: #39cdcc;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
+
+/* For phones */
+@media (max-width: 600px) {
+  .login_form_container {
+    width: 100%;
+  }
+}

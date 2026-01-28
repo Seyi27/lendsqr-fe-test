@@ -1,0 +1,15 @@
+.dashboard_wrapper {
+  font-family: "Work Sans", sans-serif;
+}
+
+.dashboard_content {
+  margin-top: 70px;
+  padding: 20px;
+  margin-left: 320px; /* Match the sidebar width */
+}
+
+@media (max-width: 600px) {
+  .dashboard_content {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,32 @@
+/* using the sidebar styles from Sidebar.scss */
+
+/* For phones */
+@media only screen and (max-width: 600px) {
+  .menu_sidebar_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+  }
+
+  .menu_sidebar_content {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+  }
+
+  .menu_cancel_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+}

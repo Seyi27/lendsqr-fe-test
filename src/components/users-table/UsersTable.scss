@@ -1,0 +1,108 @@
+/************ table ************/
+.user-table_wrapper {
+  table {
+    width: 100%;
+    table-layout: auto;
+    background-color: white;
+    padding: 15px;
+  }
+
+  th,
+  td {
+    text-align: left;
+    white-space: nowrap; /* Prevent content from wrapping */
+  }
+
+  th {
+    font-size: 12px;
+    color: #545f7d;
+    font-weight: bold;
+  }
+
+  td {
+    font-weight: 400;
+    font-size: 13px;
+    color: #545f7d;
+    border-bottom: 1px solid #213f7d1a;
+    padding: 15px 0;
+  }
+
+  /* Remove border from the last row */
+  tbody tr:last-child td {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .th_name {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .status_pill {
+    padding: 3px 10px;
+    border-radius: 15px;
+  }
+
+  .active {
+    background-color: #39cd6233;
+    color: #39cd62;
+  }
+
+  .pending {
+    background-color: #e9b20033;
+    color: #e9b200;
+  }
+
+  .blacklisted {
+    background-color: #e4033b33;
+    color: #e4033b;
+  }
+
+  .inactive {
+    background-color: #545f7d0f;
+    color: #4c4c4c;
+  }
+
+  .ellipsis {
+    background-color: #e5e7eb;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .dropdown {
+    position: absolute;
+    width: 170px;
+    top: 10px;
+    right: 20px;
+    background-color: white;
+    font-size: 12px;
+    border: 1ps solid grey;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 5;
+    box-shadow: 3px 5px 20px 0px #0000000a;
+
+    p {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      padding: 7px 0;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .user-table_wrapper {
+    overflow-x: auto;
+
+    th,
+    td {
+      padding-right: 15px;
+    }
+  }
+}
