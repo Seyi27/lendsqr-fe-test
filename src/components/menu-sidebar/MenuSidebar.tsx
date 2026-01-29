@@ -1,4 +1,9 @@
-import { BsChevronDown, BsPersonCheckFill, BsPersonXFill, BsX } from "react-icons/bs";
+import {
+  BsChevronDown,
+  BsPersonCheckFill,
+  BsPersonXFill,
+  BsX,
+} from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import aufitLogs from "../../assets/icons/audit-logs.svg";
 import briefcase from "../../assets/icons/briefcase.svg";
@@ -21,6 +26,7 @@ import transactions from "../../assets/icons/transactions.svg";
 import users from "../../assets/icons/users.svg";
 import type { MenuSidebarProp } from "../../types/appTypes";
 import "./MenuSidebar.scss";
+import logOut from "../../assets/icons/log-out.svg";
 
 const MenuSidebar = ({ isOpen, closeModal }: MenuSidebarProp) => {
   const customersSidebarItems = [
@@ -227,6 +233,17 @@ const MenuSidebar = ({ isOpen, closeModal }: MenuSidebarProp) => {
                 </NavLink>
               ))}
             </div>
+          </div>
+
+          {/* logout Organization */}
+          <div className="sidebar_logout_container  sidebar_item">
+            <img src={logOut} />
+            <p>Logout</p>
+          </div>
+
+          {/* v1.2.0 */}
+          <div className="sidebar_item" style={{ fontSize: "12px" }}>
+            <p>v1.2.0</p>
           </div>
         </div>
       </div>
