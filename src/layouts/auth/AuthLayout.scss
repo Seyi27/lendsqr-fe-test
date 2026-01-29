@@ -26,7 +26,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     background-color: white;
     box-shadow: 0px 15px 90px 0px #00000008;
   }
@@ -37,6 +36,10 @@
   .auth_main_container {
     .auth_left_container {
       display: none;
+    }
+
+    .auth_right_container{
+      padding: 20px;
     }
   }
 }

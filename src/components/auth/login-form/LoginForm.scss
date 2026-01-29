@@ -1,5 +1,5 @@
 .login_form_container {
-  width: 550px;
+  width: 60%;
 
   h1 {
     margin: 0;
@@ -9,12 +9,9 @@
   p {
     margin: 0;
     color: #545f7d;
-    // font-family: "Avenir Next";
   }
 
   form {
-    padding-top: 20px;
-
     .forgot_password_text {
       margin: 20px 0;
       font-size: 12px;

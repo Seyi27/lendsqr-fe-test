@@ -1,6 +1,6 @@
 import "./AuthLayout.scss";
-import logo from "../../../assets/icons/logo.svg";
-import login_image from "../../../assets/images/login-image.png";
+import logo from "../../assets/icons/logo.svg";
+import login_image from "../../assets/images/login-image.png";
 import { Outlet } from "react-router-dom";
 
 const AuthLayout = () => {

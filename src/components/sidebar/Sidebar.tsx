@@ -22,6 +22,8 @@ import users from "../../assets/icons/users.svg";
 import preference from "../../assets/icons/preference.svg";
 import feeAndPricing from "../../assets/icons/fees-and-pricing.svg";
 import aufitLogs from "../../assets/icons/audit-logs.svg";
+import systemsMessages from "../../assets/icons/systems-messages.svg";
+import logOut from "../../assets/icons/log-out.svg";
 import "./Sidebar.scss";
 
 const Sidebar = () => {
@@ -132,6 +134,11 @@ const Sidebar = () => {
       name: "Audit Logs",
       route: "/audit-logs",
     },
+    {
+      icon: <img src={systemsMessages} />,
+      name: "Systems Messages",
+      route: "/systems-messages",
+    },
   ];
 
   return (
@@ -220,6 +227,17 @@ const Sidebar = () => {
             </NavLink>
           ))}
         </div>
+      </div>
+
+      {/* logout Organization */}
+      <div className="sidebar_logout_container  sidebar_item">
+        <img src={logOut} />
+        <p>Logout</p>
+      </div>
+
+      {/* v1.2.0 */}
+      <div className="sidebar_item" style={{ fontSize: "12px" }}>
+        <p>v1.2.0</p>
       </div>
     </div>
   );

@@ -1,22 +1,26 @@
+import { format } from "date-fns";
 import { useEffect, useRef, useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { BsCalendar } from "react-icons/bs";
 import Select, { type SingleValue } from "react-select";
 import type { DropdownSelectType, FilterModalProp } from "../../types/appTypes";
 import CustomButton from "../common/custom-button/CustomButton";
 import "./FilterModal.scss";
 
-const FilterModal = ({  closeModal }: FilterModalProp) => {
+const FilterModal = ({ closeModal }: FilterModalProp) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  const [date, setDate] = useState<string>("");
+  const [date, setDate] = useState<Date | null>(null);
   const [organization, setOrganization] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [status, setStatus] = useState("");
+
 
   const modalRef = useRef<HTMLDivElement | null>(null);
 
   // close modal when clikec outside of it
   useEffect(() => {
-
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       if (
         modalRef.current &&
@@ -33,7 +37,7 @@ const FilterModal = ({  closeModal }: FilterModalProp) => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("touchstart", handleClickOutside);
     };
-  }, [ closeModal]);
+  }, [closeModal]);
 
   const organizationOptions = [
     { label: "Lendsqr", value: "lendsqr" },
@@ -64,7 +68,7 @@ const FilterModal = ({  closeModal }: FilterModalProp) => {
   const resetButton = () => {
     setUsername("");
     setEmail("");
-    setDate("");
+    setDate(null);
     setOrganization("");
     setPhoneNo("");
     setStatus("");
@@ -231,13 +235,21 @@ const FilterModal = ({  closeModal }: FilterModalProp) => {
         <label>Date</label>
         <br></br>
 
-        <input
-          name="date"
-          type="date"
-          value={date}
-          className="text_input"
-          onChange={(e) => setDate(e.target.value)}
-          placeholder="Date"
+        <DatePicker
+          selected={date}
+          onChange={(date: Date | null) => setDate(date)}
+          wrapperClassName="filter_modal_date_picker_wrapper"
+          customInput={
+            <div className="filter_modal_date_picker">
+              <input
+                value={date ? format(date, "yyyy-MM-dd") : ""}
+                placeholder="Date"
+                readOnly
+              />
+
+              <BsCalendar size={10} />
+            </div>
+          }
         />
       </div>
 
@@ -379,7 +391,7 @@ const FilterModal = ({  closeModal }: FilterModalProp) => {
           }}
         />
       </div>
-
+      
       <div className="btn_container">
         <CustomButton
           label="Reset"

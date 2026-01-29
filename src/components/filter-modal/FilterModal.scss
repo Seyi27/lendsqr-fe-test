@@ -33,6 +33,30 @@
     }
   }
 
+  .filter_modal_date_picker {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 0 5px;
+
+    input {
+      flex: 1;
+      border: 0;
+      outline: 0;
+
+      &::placeholder {
+        color: #545f7d;
+        font-size: 11px;
+      }
+    }
+  }
+
+  .filter_modal_date_picker_wrapper {
+    width: 99%;
+  }
+
   .btn_container {
     display: flex;
     align-items: center;

@@ -4,10 +4,11 @@ import { Slide, ToastContainer } from "react-toastify";
 import "./App.scss";
 import LoginForm from "./components/auth/login-form/LoginForm";
 import UsersPage from "./screens/users/UsersPage";
-import AuthLayout from "./screens/layouts/auth/AuthLayout";
-import MainLayout from "./screens/layouts/main/MainLayout";
+import AuthLayout from "./layouts/auth/AuthLayout";
+import MainLayout from "./layouts/main/MainLayout";
 import UserDetailsPage from "./screens/user-details/UserDetailsPage";
 import ScrollToTop from "./utils/scrollToTop";
+import DashboardPage from "./screens/dashboard/DashboardPage";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           </Route>
 
           <Route element={<MainLayout />}>
+            <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/users" element={<UsersPage />} />
 
             <Route

@@ -121,3 +121,13 @@ export interface User {
   guarantor_email: string;
   guarantor_relationship: string;
 }
+
+/************ pagination props ***********/
+
+export type PaginationProps = {
+  totalItems: number;
+  pageSize: number;
+  currentPage: number;
+  onPageChange: (page: number) => void;
+  onPageSizeChange: (size: number) => void;
+};

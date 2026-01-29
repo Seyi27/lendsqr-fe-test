@@ -51,6 +51,11 @@
   color: #213f7d99;
 }
 
+.sidebar_logout_container {
+  margin-top: 20px;
+  border-top: 1px solid #213f7d1a;
+}
+
 @media (max-width: 600px) {
   .sidebar_wrapper {
     display: none;

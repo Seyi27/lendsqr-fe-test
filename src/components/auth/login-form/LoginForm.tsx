@@ -86,7 +86,7 @@ const LoginForm = () => {
           textColor="white"
           fontSize={14}
           fontWeight={600}
-          disabled={!buttonDisabled}
+          // disabled={!buttonDisabled}
           onClick={handleSubmit}
         />
       </form>

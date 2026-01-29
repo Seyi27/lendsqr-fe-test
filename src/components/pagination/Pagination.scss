@@ -17,6 +17,7 @@
     padding: 6px 10px;
     border-radius: 6px;
     border: 1px solid #dcdfe6;
+    outline: 0;
     background-color: #f5f7fa;
     font-weight: 500;
     cursor: pointer;
@@ -27,7 +28,7 @@
 .pagination_right {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 3px;
 
   button {
     min-width: 32px;

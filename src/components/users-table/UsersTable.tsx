@@ -184,16 +184,18 @@ const UsersTable = ({ data, loader }: UsersTableType) => {
         <FilterModal closeModal={() => setOpenFilterModal(false)} />
       )}
 
-      <Pagination
-        totalItems={data?.users.length ?? 0}
-        currentPage={currentPage}
-        pageSize={pageSize}
-        onPageChange={setCurrentPage}
-        onPageSizeChange={(size) => {
-          setPageSize(size);
-          setCurrentPage(1); // reset page
-        }}
-      />
+      {paginatedData && paginatedData?.length > 0 && (
+        <Pagination
+          totalItems={data?.users.length ?? 0}
+          currentPage={currentPage}
+          pageSize={pageSize}
+          onPageChange={setCurrentPage}
+          onPageSizeChange={(size) => {
+            setPageSize(size);
+            setCurrentPage(1); // reset page
+          }}
+        />
+      )}
     </div>
   );
 };

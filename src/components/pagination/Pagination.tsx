@@ -1,24 +1,16 @@
-import React from "react";
-import "./Pagination.scss";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-
-type PaginationProps = {
-  totalItems: number;
-  pageSize: number;
-  currentPage: number;
-  onPageChange: (page: number) => void;
-  onPageSizeChange: (size: number) => void;
-};
+import type { PaginationProps } from "../../types/appTypes";
+import "./Pagination.scss";
 
 const pageSizes = [10, 20, 50, 100];
 
-const Pagination: React.FC<PaginationProps> = ({
+const Pagination=({
   totalItems,
   pageSize,
   currentPage,
   onPageChange,
   onPageSizeChange,
-}) => {
+}:PaginationProps) => {
   const totalPages = Math.ceil(totalItems / pageSize);
 
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
