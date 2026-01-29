@@ -45,8 +45,8 @@ const LoginForm = () => {
     navigate("/users");
   };
 
-  const buttonDisabled =
-    text.trim() != "" && password.trim() != "" && !textError && !passwordError;
+  // const buttonDisabled =
+  //   text.trim() != "" && password.trim() != "" && !textError && !passwordError;
 
   return (
     <div className="login_form_container">
