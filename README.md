@@ -14,7 +14,7 @@ This project is a frontend assessment for Lendsqr, implementing a user managemen
 - **Styling:** SCSS
 - **Routing:** React Router v6
 - **Data Fetching:** Fetch API
-- **Mock API:** `https://6979a959cc9c576a8e174be9.mockapi.io/api/users`
+- **Mock API:** https://6979a959cc9c576a8e174be9.mockapi.io/api/users
 - **Storage:** LocalStorage / IndexedDB
 - **Testing:** Jest + React Testing Library
 - **Build Tool:** Vite
