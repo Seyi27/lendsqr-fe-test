@@ -4,7 +4,7 @@ import {
   BsPersonXFill,
   BsX,
 } from "react-icons/bs";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import aufitLogs from "../../assets/icons/audit-logs.svg";
 import briefcase from "../../assets/icons/briefcase.svg";
 import decisionModels from "../../assets/icons/decision-models.svg";
@@ -138,6 +138,8 @@ const MenuSidebar = ({ isOpen, closeModal }: MenuSidebarProp) => {
     },
   ];
 
+  const navigate = useNavigate();
+
   if (!isOpen) return null;
 
   return (
@@ -240,7 +242,10 @@ const MenuSidebar = ({ isOpen, closeModal }: MenuSidebarProp) => {
           </div>
 
           {/* logout Organization */}
-          <div className="sidebar_logout_container  sidebar_item">
+          <div
+            className="sidebar_logout_container  sidebar_item"
+            onClick={() => navigate("/")}
+          >
             <img src={logOut} />
             <p>Logout</p>
           </div>

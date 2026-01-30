@@ -3,7 +3,7 @@ import {
   BsPersonCheckFill,
   BsPersonXFill,
 } from "react-icons/bs";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import briefcase from "../../assets/icons/briefcase.svg";
 import decisionModels from "../../assets/icons/decision-models.svg";
 import feesAndCharges from "../../assets/icons/fees-charges.svg";
@@ -141,6 +141,8 @@ const Sidebar = () => {
     },
   ];
 
+  const navigate = useNavigate();
+
   return (
     <div className="sidebar_wrapper">
       {/* Switch Organization */}
@@ -230,7 +232,10 @@ const Sidebar = () => {
       </div>
 
       {/* logout Organization */}
-      <div className="sidebar_logout_container  sidebar_item">
+      <div
+        className="sidebar_logout_container  sidebar_item"
+        onClick={() => navigate("/")}
+      >
         <img src={logOut} />
         <p>Logout</p>
       </div>
