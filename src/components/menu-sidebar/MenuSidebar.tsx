@@ -164,6 +164,7 @@ const MenuSidebar = ({ isOpen, closeModal }: MenuSidebarProp) => {
                 ? "sidebar_item sidebar_item_active"
                 : "sidebar_item sidebar_item_inactive"
             }
+            onClick={closeModal}
           >
             <img src={home} />
             <p>Dashboard</p>
@@ -183,6 +184,7 @@ const MenuSidebar = ({ isOpen, closeModal }: MenuSidebarProp) => {
                       ? "sidebar_item sidebar_item_active"
                       : "sidebar_item sidebar_item_inactive"
                   }
+                  onClick={closeModal}
                 >
                   {item.icon}
                   <p>{item.name}</p>
@@ -205,6 +207,7 @@ const MenuSidebar = ({ isOpen, closeModal }: MenuSidebarProp) => {
                       ? "sidebar_item sidebar_item_active"
                       : "sidebar_item sidebar_item_inactive"
                   }
+                  onClick={closeModal}
                 >
                   {item.icon}
                   <p>{item.name}</p>
@@ -227,6 +230,7 @@ const MenuSidebar = ({ isOpen, closeModal }: MenuSidebarProp) => {
                       ? "sidebar_item sidebar_item_active"
                       : "sidebar_item sidebar_item_inactive"
                   }
+                  onClick={closeModal}
                 >
                   {item.icon}
                   <p>{item.name}</p>
