@@ -45,8 +45,8 @@ const LoginForm = () => {
     navigate("/users");
   };
 
-  // const buttonDisabled =
-  //   text.trim() != "" && password.trim() != "" && !textError && !passwordError;
+  const buttonDisabled =
+    text.trim() != "" && password.trim() != "" && !textError && !passwordError;
 
   return (
     <div className="login_form_container">
@@ -86,7 +86,7 @@ const LoginForm = () => {
           textColor="white"
           fontSize={14}
           fontWeight={600}
-          // disabled={!buttonDisabled}
+          disabled={!buttonDisabled}
           onClick={handleSubmit}
         />
       </form>
